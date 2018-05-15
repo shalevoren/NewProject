@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [wix test]" parallel="tests">
+  <parameter name="propertiesFilePath" value="./wix.properties"/>
+  <test thread-count="1" name="This testing wix web site(failed)" parallel="tests">
+    <classes>
+      <class name="First.Main">
+        <methods>
+          <include name="setUpBeforeClass"/>
+          <include name="WixText"/>
+        </methods>
+      </class> <!-- First.Main -->
+    </classes>
+  </test> <!-- This testing wix web site(failed) -->
+</suite> <!-- Failed suite [wix test] -->

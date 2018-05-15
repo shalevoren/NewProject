@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="wix test" duration-ms="29842" started-at="2018-05-15T06:38:49Z" finished-at="2018-05-15T06:39:19Z">
+    <groups>
+    </groups>
+    <test name="This testing wix web site" duration-ms="29842" started-at="2018-05-15T06:38:49Z" finished-at="2018-05-15T06:39:19Z">
+      <class name="First.Main">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:First.Main@2f686d1f]" name="setUpBeforeClass" is-config="true" duration-ms="20" started-at="2018-05-15T06:38:49Z" finished-at="2018-05-15T06:38:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method status="PASS" signature="WixText()[pri:0, instance:First.Main@2f686d1f]" name="WixText" duration-ms="29790" started-at="2018-05-15T06:38:49Z" finished-at="2018-05-15T06:39:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WixText -->
+      </class> <!-- First.Main -->
+    </test> <!-- This testing wix web site -->
+  </suite> <!-- wix test -->
+</testng-results>

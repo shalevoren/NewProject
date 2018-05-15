@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name ="wix test"
+parallel="tests" thread-count="1">
+
+<parameter name="propertiesFilePath" value="./wix.properties"></parameter>
+
+
+<test name="This testing wix web site">
+
+<classes>
+
+<class name="First.Main" />
+</classes>
+
+</test>
+
+
+</suite>
