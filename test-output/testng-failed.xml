@@ -4,12 +4,12 @@
   <parameter name="propertiesFilePath" value="./wix.properties"/>
   <test thread-count="1" name="This testing wix web site(failed)" parallel="tests">
     <classes>
-      <class name="First.Main">
+      <class name="src.First.Main">
         <methods>
-          <include name="setUpBeforeClass"/>
           <include name="WixText"/>
+          <include name="setUpBeforeClass"/>
         </methods>
-      </class> <!-- First.Main -->
+      </class> <!-- src.First.Main -->
     </classes>
   </test> <!-- This testing wix web site(failed) -->
 </suite> <!-- Failed suite [wix test] -->

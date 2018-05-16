@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="wix test" duration-ms="29842" started-at="2018-05-15T06:38:49Z" finished-at="2018-05-15T06:39:19Z">
+  <suite name="wix test" duration-ms="18184" started-at="2018-05-16T16:00:00Z" finished-at="2018-05-16T16:00:18Z">
     <groups>
     </groups>
-    <test name="This testing wix web site" duration-ms="29842" started-at="2018-05-15T06:38:49Z" finished-at="2018-05-15T06:39:19Z">
-      <class name="First.Main">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:First.Main@2f686d1f]" name="setUpBeforeClass" is-config="true" duration-ms="20" started-at="2018-05-15T06:38:49Z" finished-at="2018-05-15T06:38:49Z">
+    <test name="This testing wix web site" duration-ms="18184" started-at="2018-05-16T16:00:00Z" finished-at="2018-05-16T16:00:18Z">
+      <class name="Test.Main">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:Test.Main@78c730]" name="setUpBeforeClass" is-config="true" duration-ms="7" started-at="2018-05-16T16:00:00Z" finished-at="2018-05-16T16:00:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="WixText()[pri:0, instance:First.Main@2f686d1f]" name="WixText" duration-ms="29790" started-at="2018-05-15T06:38:49Z" finished-at="2018-05-15T06:39:19Z">
+        <test-method status="PASS" signature="WixText()[pri:0, instance:Test.Main@78c730]" name="WixText" duration-ms="18159" started-at="2018-05-16T16:00:00Z" finished-at="2018-05-16T16:00:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- WixText -->
-      </class> <!-- First.Main -->
+      </class> <!-- Test.Main -->
     </test> <!-- This testing wix web site -->
   </suite> <!-- wix test -->
 </testng-results>

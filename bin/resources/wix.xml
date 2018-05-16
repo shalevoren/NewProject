@@ -10,7 +10,7 @@ parallel="tests" thread-count="1">
 
 <classes>
 
-<class name="First.Main" />
+<class name="Test.Main" />
 </classes>
 
 </test>
