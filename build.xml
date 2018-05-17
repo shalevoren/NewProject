@@ -15,6 +15,10 @@
         <pathelement location="${ECLIPSE_HOME}plugins/org.apache-extras.beanshell.bsh_2.0.0.b6.jar"/>
         <pathelement location="${ECLIPSE_HOME}plugins/org.yaml.snakeyaml_1.17.0.jar"/>
     </path>
+        <path id="build.classpath">
+          <fileset dir="${lib.dir}" includes="**/*.jar" />
+          <fileset dir="${src.dir}/concep/selenium/core" includes="**/*.java" />
+    </path>
     <path id="NewProject.classpath">
         <pathelement location="bin"/>
         <pathelement location="selenium/client-combined-3.12.0-sources.jar"/>
@@ -50,6 +54,7 @@
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
         <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+        <javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="build.classpath" debug="true" includeantruntime="false"/>
             <src path="src"/>
             <classpath refid="NewProject.classpath"/>
         </javac>
