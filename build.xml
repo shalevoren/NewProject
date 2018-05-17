@@ -15,17 +15,14 @@
         <pathelement location="${ECLIPSE_HOME}plugins/org.apache-extras.beanshell.bsh_2.0.0.b6.jar"/>
         <pathelement location="${ECLIPSE_HOME}plugins/org.yaml.snakeyaml_1.17.0.jar"/>
     </path>
-<<<<<<< HEAD
         <path id="build.classpath">
           <fileset dir="${lib.dir}" includes="**/*.jar" />
           <fileset dir="${src.dir}/concep/selenium/core" includes="**/*.java" />
     </path>
-=======
 	<path id="build.classpath">
 		<fileset dir="${lib.dir}" includes="**/*.jar" />
 		<fileset dir="${src.dir}/concep/selenium/core" includes="**/*.java" />
 	</path>
->>>>>>> 1ef3f8d1911ea716a8e045a0520d9e6c882ce49e
     <path id="NewProject.classpath">
         <pathelement location="bin"/>
         <pathelement location="selenium/client-combined-3.12.0-sources.jar"/>
