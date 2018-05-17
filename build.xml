@@ -60,8 +60,7 @@
     <target name="build-subprojects"/>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
-        <javac srcdir="${src.dir}" destdir="${classes.dir}" classpathref="build.classpath" debug="true" includeantruntime="false"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}"> 
             <src path="src"/>
             <classpath refid="NewProject.classpath"/>
         </javac>
