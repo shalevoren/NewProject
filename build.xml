@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="NewProject">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../javatesters/eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="TestNG.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}plugins/org.testng_6.14.2.r201802161450.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/com.beust.jcommander_1.72.0.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.apache-extras.beanshell.bsh_2.0.0.b6.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.yaml.snakeyaml_1.17.0.jar"/>
+    </path>
+    <path id="NewProject.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="selenium/client-combined-3.12.0-sources.jar"/>
+        <pathelement location="selenium/client-combined-3.12.0.jar"/>
+        <pathelement location="selenium/libs/byte-buddy-1.8.3.jar"/>
+        <pathelement location="selenium/libs/commons-codec-1.10.jar"/>
+        <pathelement location="selenium/libs/commons-exec-1.3.jar"/>
+        <pathelement location="selenium/libs/commons-logging-1.2.jar"/>
+        <pathelement location="selenium/libs/gson-2.8.2.jar"/>
+        <pathelement location="selenium/libs/guava-23.6-jre.jar"/>
+        <pathelement location="selenium/libs/httpclient-4.5.3.jar"/>
+        <pathelement location="selenium/libs/httpcore-4.4.6.jar"/>
+        <pathelement location="selenium/libs/okhttp-3.9.1.jar"/>
+        <pathelement location="selenium/libs/okio-1.13.0.jar"/>
+        <path refid="TestNG.libraryclasspath"/>
+        <pathelement location="../../../Users/oshalev/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="NewProject.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+</project>
