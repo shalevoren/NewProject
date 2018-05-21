@@ -32,6 +32,10 @@
         <path refid="TestNG.libraryclasspath"/>
         <pathelement location="../../../Users/oshalev/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar"/>
     </path>
+            	<path id="build.classpath">
+                          			<fileset dir="${lib.dir}" includes="**/*.jar" />
+                          			<fileset dir="${src.dir}/concep/selenium/core" includes="**/*.java" />
+                          		</path>
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
