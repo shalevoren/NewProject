@@ -54,7 +54,7 @@
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>    
     	<javac sourcepath="" srcdir="${src}"
-    	       destdir="${build}" >
+    	       destdir="build.xml" >
     	    <include name="**/*.java"/>
     	    <exclude name="**/Example.java"/>
     	</javac>
