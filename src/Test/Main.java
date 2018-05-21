@@ -2,9 +2,7 @@ package Test;
 
 
 import org.testng.annotations.Test;
-
 import popup.GooglePopup;
-import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import java.util.Properties;
 import org.apache.commons.io.FileUtils;
